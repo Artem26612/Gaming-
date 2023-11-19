@@ -17,7 +17,7 @@ class AlienInvasion:
             self.settings.screen_width, self.settings.screen_hight))
         pygame.display.set_caption('Alien Invasion')
         '''Цвет фона'''
-        self.bg_color = (30, 17, 50)
+        self.bg_color = self.settings.bg_color
 
 
     def run_game(self):
@@ -28,7 +28,7 @@ class AlienInvasion:
                 if event.type == pygame.QUIT:
                     sys.exit()
 
-            self.screen.fill(self.settings.bg_color)
+            self.screen.fill(self.bg_color)
 
             '''Отображение последнего прорисованного экрана'''
             pygame.display.flip()
